@@ -9,7 +9,7 @@ $(function(){
     var $passmsg = $('#pass-validation-msg');
 
 
-
+    //用户名数据校验
     $user.blur(function () { 
         var username = $user.val();
         var user_reg = /^([\u4E00-\uFA29]|[\uE7C7-\uE7F3]|[a-zA-Z0-9_]){1,}$/;
@@ -36,22 +36,22 @@ $(function(){
         }       
     });
   
-    $pwd.blur(function () {
+    // $pwd.blur(function () {
 
-        var pwd = $pwd.val();
-        var pwd_reg = /(?!^\d+$)(?!^[A-Za-z]+$)(?!^[^A-Za-z0-9]+$)(?!^.*[\u4E00-\u9FA5].*$)^\S{8,14}$/;
-        console.log('ddddddddd');
-        if(pwd_reg.test(pwd) || pwd===''){
-            $pwd.css('border','1px solid #e2dada');
-            $smsg.html('');
-        }else{
-            $pwd.css('border','1px solid red');
-            $smsg.html('密码设置不符合要求');
-        }
+    //     var pwd = $pwd.val();
+    //     var pwd_reg = /(?!^\d+$)(?!^[A-Za-z]+$)(?!^[^A-Za-z0-9]+$)(?!^.*[\u4E00-\u9FA5].*$)^\S{8,14}$/;
+    //     console.log('ddddddddd');
+    //     if(pwd_reg.test(pwd) || pwd===''){
+    //         $pwd.css('border','1px solid #e2dada');
+    //         $smsg.html('');
+    //     }else{
+    //         $pwd.css('border','1px solid red');
+    //         $smsg.html('密码设置不符合要求');
+    //     }
         
-    });
+    // });
     
-
+    //点击发送验证码效果
     $getpass.mouseover(function () { 
         $getpass.css({color:"blue",border:"1px solid blue"}); 
     });
