@@ -9,7 +9,7 @@ $(function(){
     var $passmsg = $('#pass-validation-msg');
 
 
-    //用户名数据校验
+
     $user.blur(function () { 
         var username = $user.val();
         var user_reg = /^([\u4E00-\uFA29]|[\uE7C7-\uE7F3]|[a-zA-Z0-9_]){1,}$/;
@@ -23,7 +23,7 @@ $(function(){
         }
         
     });
-    //手机号格式校验
+ 
     $phone.blur(function () { 
         var phone = $phone.val();
         var tel_reg = /^1([38]\d|5[0-35-9]|7[3678])\d{8}$/;
@@ -35,8 +35,9 @@ $(function(){
             $pmsg.html('手机号码格式不正确');
         }       
     });
-    //密码校验：字母、数字、符号至少包含两种，不允许有空格，中文；8-14位
-    $pwd.blur(function () { 
+  
+    $pwd.blur(function () {
+
         var pwd = $pwd.val();
         var pwd_reg = /(?!^\d+$)(?!^[A-Za-z]+$)(?!^[^A-Za-z0-9]+$)(?!^.*[\u4E00-\u9FA5].*$)^\S{8,14}$/;
         console.log('ddddddddd');
@@ -50,7 +51,7 @@ $(function(){
         
     });
     
-    //点击发送验证码效果
+
     $getpass.mouseover(function () { 
         $getpass.css({color:"blue",border:"1px solid blue"}); 
     });
